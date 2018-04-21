@@ -18,7 +18,10 @@ while play:
     while tries < guesses:
         print("you have " + str(guesses - tries) + " tries left")
         # ask the user for a response and store it in the variable [guess]
-        guess = input("please put in a guess, from 1 to " + str(guess_range))
+        print("please put in a guess, from 1 to " + str(guess_range))
+        guess = input()
+        '''I separated these lines of code to avoid clutter and make it more clear where to type a response.'''
+
         # a try/except block is a great tool for programmers to be able to deal with errors.
         # In this instance, it reports an error if the user enters something other than an integer
         try:
@@ -41,7 +44,10 @@ while play:
                     ask = True
                     tries = guesses
                     while ask:
-                        answer = input("do you want to play again? y/n")
+                        print("do you want to play again? y/n")
+                        answer = input()
+                        '''Similar to the guesses, this will allow the input to be on a different line to make it more clear for the
+                        Player where to put their response'''
                         if answer is "n" or answer is "N":
                             ask = False
                             play = False
@@ -62,7 +68,11 @@ while play:
         print("you ran out of guesses. the number was " + str(number))
         ask = True
         while ask:
-            answer = input("do you want to play again? y/n")
+            print("do you want to play again? y/n")
+            answer = input()
+            '''Similar to the guesses, this will allow the input to be on a different line to make it more clear for the
+            Player where to put their response'''
+
             if answer is "n" or answer is "N":
                 ask = False
                 play = False
